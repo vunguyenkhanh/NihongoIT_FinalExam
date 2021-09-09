@@ -2,10 +2,7 @@ import { useState } from 'react'
 
 function DeleteUser(){
     const [name, setName] = useState('');
-
-
     const [user, setUser] = useState(['Huyen', 'Hoa', 'Hung', 'Long']);
-
     var newArr = user.join(', ');
 
     const handleChange = (event) => {
