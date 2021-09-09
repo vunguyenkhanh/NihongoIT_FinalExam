@@ -18,4 +18,4 @@ function DeleteUser(){
     return [name, newArr, handleChange, handleDeleteName];
 }
 
-export default DeleteUser
+export default DeleteUser;
