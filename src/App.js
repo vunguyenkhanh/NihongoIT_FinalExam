@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import DeleteUser from './hook'
 
 function App() {
+  const [name, newArr, handleChange, handleDeleteName] = DeleteUser(); 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h4>学生一覧: [Huyen, Hoa, Hung, Long]</h4>
+      <h4>追加する名前を入力してください。</h4>
+      <input onChange={handleChange} value={name}></input>
+      <br/>
+      <button  onClick={() => handleDeleteName(name)} style={{marginLeft: 120, marginTop: 20}}>確定</button>
+      <h4>削除する名前：{name}</h4>
+      <h4>新しい一覧：[{newArr}]</h4>
     </div>
   );
 }
